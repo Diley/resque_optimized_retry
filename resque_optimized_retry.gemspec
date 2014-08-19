@@ -8,10 +8,10 @@ Gem::Specification.new do |spec|
   spec.version       = ResqueOptimizedRetry::VERSION
   spec.authors       = ["Rodrigo Fontoura"]
   spec.email         = ["rodrigo.fontoura@dito.com.br"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Gem para dar retry de forma otimizada nos jobs que falharam do Resque}
+  spec.summary       = %q{Gem para dar retry de forma otimizada nos jobs que falharam do Resque}
   spec.homepage      = ""
-  spec.license       = "MIT"
+  spec.license       = ""
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
