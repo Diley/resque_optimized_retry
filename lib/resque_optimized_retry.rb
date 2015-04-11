@@ -12,7 +12,7 @@ module ResqueOptimizedRetry
     def retry_and_clear
       while can_retry?
         failed_job = redis.lpop("failed")
-        break if failed_job.blank?
+        break if !failed_job
         job = JSON.parse failed_job
         Resque::Job.create job['queue'], job['payload']['class'], *job['payload']['args']
         @retried_count += 1
